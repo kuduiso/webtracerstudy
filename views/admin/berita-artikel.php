@@ -103,7 +103,7 @@ if(isset($_GET['state']) && $_GET['state'] == 'tambah') { ?>
          $id_post = $_GET['id_post'];
          $title = $_POST['title_post'];
          $date = $_POST['date_post'];
-         $text = htmlspecialchars($_POST['text_post']);
+         $text = htmlspecialchars(addslashes($_POST['text_post']));
          $picture = $_FILES['picture_post'];
          $picture_old = $_POST['picture_old'];
          $pict_filename = '';
