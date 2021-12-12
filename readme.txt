@@ -1,8 +1,8 @@
 == HALAMAN UTAMA ==
-http://localhost/tracerstudy
+http://localhost/webtracerstudy
 
 == LOGIN PAGE ADMIN ===
-http://localhost/tracerstudy/admin/login.php
+http://localhost/webtracerstudy/admin/login.php
 
 == USER ADMIN ===
 username: viyak
