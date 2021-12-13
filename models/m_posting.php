@@ -20,6 +20,13 @@ class Posting{
       $query = $db->query($sql) or die ($db->error);
       return $query;
    }
+   
+   public function tampil_gambar($id) {
+      $db = $this->mysqli->conn;
+      $sql = "SELECT picture_post FROM blog_post WHERE id_post = $id";
+      $query = $db->query($sql) or die ($db->error);
+      return $query;
+   }
 
    public function tambah($title, $picture_post, $date_post, $text_post) {
       $db = $this->mysqli->conn;
