@@ -198,8 +198,14 @@ if(isset($_GET['state']) && $_GET['state'] == 'tambah') { ?>
    <?php 
       if(isset($_POST['submit-delete'])) {
          $id_post = $_POST['id_post'];
-         $posting->hapus($id_post);
-         header('location: ?page=berita-artikel');
+         // read picture name and delete
+         $picture_cover = $posting->tampil_gambar($id_post)->fetch_object()->picture_post;
+         if(unlink('../images/image_contents/'.$picture_cover)) {
+            $posting->hapus($id_post);
+            header('location: ?page=berita-artikel');
+         } else {
+            echo "Berita/Artikel gagal dihapus";
+         }
       }
    ?>
 
